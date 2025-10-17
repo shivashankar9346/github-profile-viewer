@@ -23,11 +23,17 @@ const Users = () => {
 
   return (
           <div className='container'>
+            <h1> 🚀 GitHub User Explorer</h1>
+            <h2>GitHub Users</h2>
             {data.map(user => (
                 <div key={user.id} className='card'>
-                    <img src={user.avatar_url} alt={user.login}/>
+                    <div className='userprofile'>
+                      <img src={user.avatar_url} alt={user.login} style={{ width: "50px" }}/>
                     <h3>{user.login}</h3>
-                    <button onClick={() => HandleClick(user.login)}>Profile</button>
+                    </div>
+                    <div>
+                      <button onClick={() => HandleClick(user.login)} className='Profile-btn'> View Profile</button>
+                    </div>
                 </div>
             ))}
         </div>

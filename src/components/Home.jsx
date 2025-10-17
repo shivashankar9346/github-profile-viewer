@@ -10,9 +10,9 @@ const Home = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>GitHub Users Explorer</h1>
+      <h1>🚀 GitHub Users Explorer</h1>
       <p>Welcome to github users explorer</p>
-      <button onClick={handleClick}>Fetch GitHub Users</button>
+      <button onClick={handleClick} className="home-btn">Fetch GitHub Users</button>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Users from './components/Users'
 import Profile from './pages/profile'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './App.css'
 
 let router = createBrowserRouter([
   { path: '/', element: <Home /> },
