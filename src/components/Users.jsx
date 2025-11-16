@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Users.css'
 
 const Users = () => {
 
@@ -22,21 +23,29 @@ const Users = () => {
     
 
   return (
-          <div className='container'>
-            <h1> 🚀 GitHub User Explorer</h1>
-            <h2>GitHub Users</h2>
-            {data.map(user => (
-                <div key={user.id} className='card'>
-                    <div className='userprofile'>
-                      <img src={user.avatar_url} alt={user.login} style={{ width: "50px" }}/>
-                    <h3>{user.login}</h3>
-                    </div>
-                    <div>
-                      <button onClick={() => HandleClick(user.login)} className='Profile-btn'> View Profile</button>
-                    </div>
-                </div>
-            ))}
-        </div>
+        <div className="container">
+ <div>
+   <h1>🚀 GitHub User Explorer</h1>
+  <h2>GitHub Users</h2>
+ </div>
+
+  {data.map((user) => (
+    <div key={user.id} className="card">
+      <div className="userprofile">
+        <img src={user.avatar_url} alt={user.login} className="avatar" />
+        <h3>{user.login}</h3>
+      </div>
+
+      <button
+        onClick={() => HandleClick(user.login)}
+        className="Profile-btn"
+      >
+        View Profile
+      </button>
+    </div>
+  ))}
+</div>
+
    
   )
 }
